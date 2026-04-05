@@ -30,21 +30,30 @@ function Home() {
     return(
 
         <div className="container">
-            {
-                countries.map( (country, idx) => {
-                    return(
-                        <div className="containerCard" key={idx}>
-                            <div className="flag">
-                                <img src={country.flag} alt={country.code} title={country.name} />
-                            </div>
-                            {/* <div className="countryInfos">
-                                {country.name}
-                            </div> */}
-                        </div>
-                    )
-                })
-            }
 
+            <div className="countryInfoSelected">
+                <div className="title">
+                    <h1>Selecione o país desejado</h1>
+                </div>
+                <div className="sideContainer">
+                    <div className="sideLeft">A</div>
+                    <div className="sideRight">B</div>
+                </div>
+            </div>
+
+            <div className="teste">
+                {
+                    countries.map( (country, idx) => {
+                        return(
+                            <div className="containerCard" key={idx}>
+                                <div className="flag">
+                                    <img src={country.flag} alt={country.code} title={country.name} />
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
 
         </div>
     )
