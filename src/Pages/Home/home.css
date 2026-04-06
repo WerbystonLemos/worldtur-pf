@@ -1,38 +1,56 @@
 .container
 {
+    border-radius: 30px;
     transition: all 0.3s;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0;
     box-sizing: border-box;
-    padding: 0;
+    box-shadow: -5px 10px 30px 15px #2f688a;
+    margin: 40px;
+    overflow: hidden;
 }
 .sideContainer
 {
     display: flex;
-    justify-content: space-around;
-    height: 50vh;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
 }
-.side
+.aside
 {
+    height: 100%;
     display: flex;
+    gap: 40px;
+    padding: 40px;
 }
 .sideLeft
 {
-    width: 100%;
+    border-radius: 30px;
+    box-shadow: -5px 10px 30px 15px #2f688a;
+    width: 28.5vw;
     font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    padding: 0 10rem;
+    gap: 10px;
 }
 .sideLeft span
 {
+    transition: all 0.5s;
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 0 20px;
+    padding: 0 10px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 3px 1px #2f688a;
+}
+.sideLeft span:hover
+{
+    transition: all 0.5s;
+    background: #2f688a;
+    box-shadow: none;
+    padding-left: 20px;
+    color: #fff;
 }
 .sideLeft span p
 {
@@ -40,12 +58,14 @@
 }
 .sideRight
 {
-    width: 100%;
+    box-shadow: -5px 10px 30px 15px #2f688a;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding: 0 50px;
 }
 .sideRight img
 {
@@ -53,15 +73,14 @@
 }
 .contaienrFlags
 {
-    height: 38vh;
+    border-radius: 30px;
+    margin: 120px 30px auto 0px;
+    box-shadow: -5px 10px 30px 15px #2f688a;
+    width: 31.5vw;
+    height: 72vh;
     display: flex;
     flex-wrap: wrap;
     overflow-x: scroll;
-}
-.countryInfoSelected
-{
-    display: flex;
-    flex-direction: column;
 }
 .title h1
 {
@@ -78,4 +97,34 @@
 {
     width: 40px;
     border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+    .container
+    {
+        flex-direction: column;
+    }
+    .aside
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .sideLeft
+    {
+        width: 100%;
+        /* height: 50vh; */
+        padding: 25px 0;
+    }
+    .sideRight
+    {
+        padding-top: 50px;
+    }
+    .contaienrFlags
+    {
+        width: 100%;
+    }
+    .mainFlags
+    {
+        margin: 40px;
+    }
 }

@@ -54,29 +54,32 @@ function Home() {
         <div className="container">
 
             <div className="countryInfoSelected">
-                <div className="title">
-                    <h1>{title}</h1>
-                </div>
                 <div className="sideContainer">
-                    
-                    <div className="sideLeft side">
-                        {countrySelected.code ? <span> <RxLetterCaseUppercase /><p>{countrySelected.code}</p></span> : ''}
-                        {countrySelected.name ? <span> <SiUnitednations /><p>{countrySelected.name}</p></span> : ''}
-                        {countrySelected.capitalName ? <span> <MdOutlinePlace /><p>{countrySelected.capitalName}</p></span> : ''}
-                        {countrySelected.continent ? <span> <IoEarthSharp /><p>{countrySelected.continent}</p></span> : ''}
-                        {countrySelected.currentCode ? <span> <MdAttachMoney /><p>{countrySelected.currentCode}</p></span> : ''}
-                        {countrySelected.currentName ? <span> <FaRegMoneyBill1 /><p>{countrySelected.currentName}</p></span> : ''}
+                    <div className="title">
+                        <h1>{title}</h1>
                     </div>
                     
-                    <div className="sideRight side">
-                        <img src={countrySelected.flag} alt="" />
-                        <p>{countrySelected.name} - {countrySelected.code}</p>
+                    <div className="aside">
+                        <div className="sideLeft">
+                            {countrySelected.code ? <span> <RxLetterCaseUppercase /><p>{countrySelected.code}</p></span> : ''}
+                            {countrySelected.name ? <span> <SiUnitednations /><p>{countrySelected.name}</p></span> : ''}
+                            {countrySelected.capitalName ? <span> <MdOutlinePlace /><p>{countrySelected.capitalName}</p></span> : ''}
+                            {countrySelected.continent ? <span> <IoEarthSharp /><p>{countrySelected.continent}</p></span> : ''}
+                            {countrySelected.currentCode ? <span> <MdAttachMoney /><p>{countrySelected.currentCode}</p></span> : ''}
+                            {countrySelected.currentName ? <span> <FaRegMoneyBill1 /><p>{countrySelected.currentName}</p></span> : ''}
+                        </div>
+                        
+                        <div className="sideRight">
+                            <img src={countrySelected.flag} alt="" />
+                            <p>{countrySelected.name} - {countrySelected.code}</p>
+                        </div>
                     </div>
                     
                 </div>
             </div>
 
-            <div className="contaienrFlags">
+            <div className="mainFlags">
+                <div className="contaienrFlags">
                 {
                     countries.map( (country, idx) => {
                         return(
@@ -88,6 +91,7 @@ function Home() {
                         )
                     })
                 }
+                </div>
             </div>
 
         </div>
